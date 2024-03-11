@@ -140,3 +140,7 @@ f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
 fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
 
 eval "$(zoxide init zsh)"
+
+PATH=~/.console-ninja/.bin:$PATH
+
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
