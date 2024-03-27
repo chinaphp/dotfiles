@@ -144,3 +144,4 @@ eval "$(zoxide init zsh)"
 PATH=~/.console-ninja/.bin:$PATH
 
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
