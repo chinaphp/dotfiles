@@ -40,7 +40,6 @@ neovim
 nikto
 nmap
 noahgorstein/tap/jqp
-openai-whisper
 pgcli
 procs
 ranger
