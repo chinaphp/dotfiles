@@ -146,3 +146,6 @@ PATH=~/.console-ninja/.bin:$PATH
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+
+# Created by `pipx` on 2024-05-24 02:53:29
+export PATH="$PATH:/Users/jack/.local/bin"
