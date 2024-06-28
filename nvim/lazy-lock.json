@@ -1,7 +1,12 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "FTerm.nvim": { "branch": "master", "commit": "d1320892cc2ebab472935242d9d992a2c9570180" },
+<<<<<<< HEAD
   "LuaSnip": { "branch": "master", "commit": "a7a4b4682c4b3e2ba82b82a4e6e5f5a0e79dec32" },
+=======
+  "LuaSnip": { "branch": "master", "commit": "f3b3d3446bcbfa62d638b1903ff00a78b2b730a1" },
+  "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
+>>>>>>> 8c35bdbe77d33c1c8971bb752979d0fa18f26930
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "codeium.vim": { "branch": "main", "commit": "5b8f68d5c0e32ae97d073a56ff14dba5646ec223" },
@@ -50,7 +55,11 @@
   "vim-dadbod": { "branch": "master", "commit": "960bbb7de11b7282a68d579a64e838b487934493" },
   "vim-dadbod-completion": { "branch": "master", "commit": "c920cb0ba3dff4b1b0ed373e1c0b3007dec696c2" },
   "vim-dadbod-ui": { "branch": "master", "commit": "165699c573469e6a95b48d35052f848c340c5911" },
+<<<<<<< HEAD
   "vim-fugitive": { "branch": "master", "commit": "41beedabc7e948c787ea5696e04c3544c3674e23" },
+=======
+  "vim-fugitive": { "branch": "master", "commit": "011cf4fcb93a9649ffc6dcdff56ef948f5d0f7cc" },
+>>>>>>> 8c35bdbe77d33c1c8971bb752979d0fa18f26930
   "vim-obsession": { "branch": "master", "commit": "fe9d3e1a9a50171e7d316a52e1e56d868e4c1fe5" },
   "vim-pencil": { "branch": "master", "commit": "6d70438a8886eaf933c38a7a43a61adb0a7815ed" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
