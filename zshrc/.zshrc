@@ -149,3 +149,5 @@ export PATH="/opt/homebrew/sbin:$PATH"
 
 # Created by `pipx` on 2024-05-24 02:53:29
 export PATH="$PATH:/Users/jack/.local/bin"
+
+export PATH="/Applications/Tailscale.app/Contents/MacOS:$PATH"
