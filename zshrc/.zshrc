@@ -143,7 +143,7 @@ eval "$(zoxide init zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
 
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
@@ -151,3 +151,8 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/jack/.local/bin"
 
 export PATH="/Applications/Tailscale.app/Contents/MacOS:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/local/opt/node@18/bin:$PATH"
