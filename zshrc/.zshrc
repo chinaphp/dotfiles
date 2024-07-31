@@ -27,6 +27,7 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 alias la=tree
 alias cat=bat
+alias dig2="dig @223.5.5.5 "
 
 # Git
 alias gc="git commit -m"
@@ -155,4 +156,12 @@ export PATH="/Applications/Tailscale.app/Contents/MacOS:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/usr/local/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/ibm-semeru-open-8.jdk/Contents/Home"
+
+export JAVA_17_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+
+alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
+
+alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
