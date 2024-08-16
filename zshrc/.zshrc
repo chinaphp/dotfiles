@@ -145,7 +145,7 @@ PATH=~/.console-ninja/.bin:$PATH
 
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Created by `pipx` on 2024-05-24 02:53:29
 export PATH="$PATH:/Users/jack/.local/bin"
