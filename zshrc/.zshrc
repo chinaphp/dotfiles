@@ -165,3 +165,13 @@ export JAVA_17_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 
 alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
+
+
+alias skopeo-copy="skopeo copy --override-arch amd64 --override-os linux "
+
+alias skopeo-sync="skopeo sync --override-arch amd64 --override-os linux --src docker --dest dir"
+
+# Load environment variables from the .env_vars file
+if [ -f ~/.env_vars ]; then
+    source ~/.env_vars
+fi
