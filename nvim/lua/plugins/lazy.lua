@@ -22,7 +22,16 @@ require('lazy').setup({
     build = "make",
     opts = {
       -- add any opts here
-       provider = "deepseek"
+      -- provider = "deepseek"
+
+      provider = "openai",
+      openai = {
+        endpoint = "https://gateway.ai.cloudflare.com/v1/58ce867830efe953a08d243e5049e4bd/ai-gateway/openai",
+        model = "gpt-4o-mini",
+        temperature = 0,
+        max_tokens = 4096,
+      },
+
     },
     dependencies = {
       "nvim-tree/nvim-web-devicons",
