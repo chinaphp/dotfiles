@@ -17,6 +17,43 @@ vim.o.termguicolors = true
 
 require('lazy').setup({
   {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    build = "make",
+    opts = {
+      -- add any opts here
+      -- provider = "deepseek"
+
+      provider = "openai",
+      openai = {
+        endpoint = "https://gateway.ai.cloudflare.com/v1/58ce867830efe953a08d243e5049e4bd/ai-gateway/openai",
+        model = "gpt-4o-mini",
+        temperature = 0,
+        max_tokens = 4096,
+      },
+
+    },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      {
+        "grapp-dev/nui-components.nvim",
+        dependencies = {
+          "MunifTanjim/nui.nvim"
+        }
+      },
+      --- The below is optional, make sure to setup it properly if you have lazy=true
+      {
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      },
+    },
+  },
+  {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
