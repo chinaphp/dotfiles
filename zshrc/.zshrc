@@ -69,7 +69,7 @@ alias v="/opt/homebrew/bin/nvim"
 # Nmap
 alias nm="nmap -sC -sV -oN nmap"
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/omer/.vimpkg/bin:${GOPATH}/bin:/Users/omerhamerman/.cargo/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/omer/.vimpkg/bin:${GOPATH}/bin:/Users/jack/.cargo/bin
 
 alias cl='clear'
 
@@ -170,6 +170,8 @@ alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
 alias skopeo-copy="skopeo copy --override-arch amd64 --override-os linux "
 
 alias skopeo-sync="skopeo sync --override-arch amd64 --override-os linux --src docker --dest dir"
+
+export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 
 # Load environment variables from the .env_vars file
 if [ -f ~/.env_vars ]; then
