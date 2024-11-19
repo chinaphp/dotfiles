@@ -1,5 +1,5 @@
 {
-  description = "Example Darwin system flake";
+  description = "My Darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -36,7 +36,8 @@
       system.stateVersion = 4;
 
       # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch64-darwin";
+      # nixpkgs.hostPlatform = "aarch64-darwin";
+      nixpkgs.hostPlatform = "x86_64-darwin";
     
       security.pam.enableSudoTouchIdAuth = true;
 
@@ -55,7 +56,7 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Omers-MacBook-Pro
-    darwinConfigurations."Omers-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 

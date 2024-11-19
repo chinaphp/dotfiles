@@ -63,7 +63,7 @@ alias ......="cd ../../../../.."
 export GOPATH='/Users/jack/go'
 
 # VIM
-alias v="/user/local/bin/nvim"
+alias v="/opt/homebrew/bin/nvim"
 
 # Nmap
 alias nm="nmap -sC -sV -oN nmap"
@@ -144,7 +144,7 @@ eval "$(zoxide init zsh)"
 PATH=~/.console-ninja/.bin:$PATH
 
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/sbin:$PATH"
 #export PATH="/opt/homebrew/bin:$PATH"
 
 # Created by `pipx` on 2024-05-24 02:53:29
@@ -159,3 +159,5 @@ export PATH="/usr/local/opt/node@18/bin:$PATH"
 
 export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 
+
+export PATH="$PATH:/Users/jack/.rd/bin"
