@@ -39,7 +39,7 @@
       # nixpkgs.hostPlatform = "aarch64-darwin";
       nixpkgs.hostPlatform = "x86_64-darwin";
     
-      security.pam.enableSudoTouchIdAuth = true;
+      # security.pam.enableSudoTouchIdAuth = true;
 
       system.defaults = {
         dock.autohide = true;
@@ -55,12 +55,12 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Omers-MacBook-Pro
+    # $ darwin-rebuild build --flake .#iMac
     darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Omers-MacBook-Pro".pkgs;
+    darwinPackages = self.darwinConfigurations."iMac".pkgs;
   };
 }

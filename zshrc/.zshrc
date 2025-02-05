@@ -161,3 +161,7 @@ export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 
 
 export PATH="$PATH:/Users/jack/.rd/bin"
+
+# Added by Windsurf
+export PATH="/Users/jack/.codeium/windsurf/bin:$PATH"
+export TERM=xterm-256color
