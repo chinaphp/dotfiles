@@ -177,3 +177,6 @@ export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 if [ -f ~/.env_vars ]; then
     source ~/.env_vars
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jack/.cache/lm-studio/bin"

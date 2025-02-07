@@ -15,6 +15,11 @@
       environment.systemPackages =
         [ 
         pkgs.vim
+        pkgs.direnv
+        pkgs.sshs
+        pkgs.glow
+        pkgs.nushell
+        pkgs.carapace
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -40,6 +45,11 @@
     
       security.pam.enableSudoTouchIdAuth = true;
 
+      users.users.jack.home = "/Users/jack";
+      ome-manager.backupFileExtension = "backup";
+      nix.configureBuildUsers = true;
+      nix.useDaemon = true;
+
       system.defaults = {
         dock.autohide = true;
         dock.mru-spaces = false;
@@ -50,16 +60,26 @@
         screensaver.askForPasswordDelay = 10;
       };
 
+      # Homebrew needs to be installed on its own!
+      homebrew.enable = true;
+      homebrew.casks = [
+	      "wireshark"
+             # "google-chrome"
+      ];
+      homebrew.brews = [
+	      "imagemagick"
+      ];
+
     };
   in
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Omers-MacBook-Pro
-    darwinConfigurations."Omers-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Jack-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Omers-MacBook-Pro".pkgs;
+    darwinPackages = self.darwinConfigurations."Jack-MacBook-Air".pkgs;
   };
 }
