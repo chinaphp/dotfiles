@@ -54,6 +54,14 @@ require('lazy').setup({
     },
   },
   {
+    "keaising/im-select.nvim",
+    lazy = false,
+    opts = {
+      default_im_select = "com.apple.keylayout.ABC",
+      default_command = "im-select",
+    },
+  },
+  {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
