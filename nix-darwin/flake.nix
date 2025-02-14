@@ -16,6 +16,7 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
+      ids.gids.nixbld = 350;
       environment.systemPackages =
         [ 
         pkgs.vim
@@ -27,7 +28,7 @@
         ];
 
       # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
+      # services.nix-daemon.enable = true;
       # nix.package = pkgs.nix;
 
       # Necessary for using flakes on this system.
@@ -52,8 +53,8 @@
 
       users.users.jack.home = "/Users/jack";
       home-manager.backupFileExtension = "backup";
-      nix.configureBuildUsers = true;
-      nix.useDaemon = true;
+      # nix.configureBuildUsers = true;
+      # nix.useDaemon = true;
 
       system.defaults = {
         dock.autohide = true;
@@ -71,9 +72,9 @@
 	      "wireshark"
               "google-chrome"
       ];
-      homebrew.brews = [
-	      "imagemagick"
-      ];
+      #homebrew.brews = [
+      #	      "imagemagick"
+      #   ];
     };
   in
   {
@@ -86,7 +87,7 @@
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.omerxx = import ./home.nix;
+          home-manager.users.jack = import ./home.nix;
         }
         ];
     };
