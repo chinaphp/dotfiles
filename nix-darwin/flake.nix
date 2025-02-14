@@ -64,11 +64,11 @@
       homebrew.enable = true;
       homebrew.casks = [
 	      "wireshark"
-             # "google-chrome"
+              "google-chrome"
       ];
-      homebrew.brews = [
-	      "imagemagick"
-      ];
+      #homebrew.brews = [
+      #	      "imagemagick"
+      #];
 
     };
   in
