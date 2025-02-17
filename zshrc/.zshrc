@@ -27,7 +27,7 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 alias la=tree
 alias cat=bat
-
+alias dig="dig @119.29.29.29 "
 # Git
 alias gc="git commit -m"
 alias gca="git commit -a -m"
