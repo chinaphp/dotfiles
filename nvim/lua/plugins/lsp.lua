@@ -21,6 +21,9 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
+  local lspconfig = require'lspconfig'
+
+
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
@@ -106,6 +109,15 @@ require('lspconfig').lua_ls.setup {
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = { enable = false },
     },
+  },
+}
+
+
+require('lspconfig').intelephense.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+  init_options = {
+    licenceKey = os.getenv('INTELEPHENSELICENCE'),
   },
 }
 

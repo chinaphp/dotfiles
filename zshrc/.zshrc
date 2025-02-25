@@ -27,7 +27,7 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 alias la=tree
 alias cat=bat
-alias dig2="dig @223.5.5.5 "
+alias dig="dig @119.29.29.29 "
 
 # Git
 alias gc="git commit -m"
@@ -99,6 +99,7 @@ bindkey jj vi-cmd-mode
 # Eza
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
 
 # SEC STUFF
 alias gobust='gobuster dir --wordlist ~/security/wordlists/diccnoext.txt --wildcard --url'
@@ -140,7 +141,12 @@ fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && l; }
 f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
 fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
 
+
+export XDG_CONFIG_HOME="/Users/jack/.config"
+
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+eval "$(direnv hook zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
 
@@ -180,3 +186,5 @@ fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/jack/.cache/lm-studio/bin"
+
+alias ssh="TERM=xterm-256color ssh"
