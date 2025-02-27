@@ -175,3 +175,8 @@ export PATH="$PATH:/Users/jack/.rd/bin"
 # Added by Windsurf
 export PATH="/Users/jack/.codeium/windsurf/bin:$PATH"
 export TERM=xterm-256color
+
+# 自动加载项目内的 .env_vars
+if [ -f .env_vars ]; then
+  source .env_vars
+fi
