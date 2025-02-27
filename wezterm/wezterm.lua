@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 return {
+	adjust_window_size_when_changing_font_size = false,
 	-- color_scheme = 'termnial.sexy',
 	color_scheme = 'Catppuccin Mocha',
 	enable_tab_bar = false,
@@ -21,9 +22,14 @@ return {
 	window_decorations = 'RESIZE',
 	keys = {
 		{
-			key = 'f',
+			key = 'q',
 			mods = 'CTRL',
 			action = wezterm.action.ToggleFullScreen,
+		},
+		{
+			key = '\'',
+			mods = 'CTRL',
+			action = wezterm.action.ClearScrollback 'ScrollbackAndViewport',
 		},
 	},
 	mouse_bindings = {

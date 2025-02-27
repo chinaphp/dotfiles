@@ -4,7 +4,11 @@ format = """$directory$character"""
 palette = "catppuccin_mocha"
 # move the rest of the prompt to the right
 right_format = """$all"""
-command_timeout = 1700
+command_timeout = 1000
+
+[character]
+vicmd_symbol = "[N] >>>"
+success_symbol = '[➜](bold green)'
 
 [directory.substitutions]
 '~/tests/starship-custom' = 'work-project'
