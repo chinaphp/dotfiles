@@ -180,3 +180,5 @@ export TERM=xterm-256color
 if [ -f .env_vars ]; then
   source .env_vars
 fi
+export PATH="/usr/local/opt/php@8.1/bin:$PATH"
+export PATH="/usr/local/opt/php@8.1/sbin:$PATH"
