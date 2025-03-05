@@ -150,7 +150,6 @@ eval "$(direnv hook zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
 
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 # export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
@@ -162,7 +161,6 @@ export PATH="/Applications/Tailscale.app/Contents/MacOS:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/ibm-semeru-open-8.jdk/Contents/Home"
 
@@ -188,3 +186,11 @@ fi
 export PATH="$PATH:/Users/jack/.cache/lm-studio/bin"
 
 alias ssh="TERM=xterm-256color ssh"
+# pnpm
+export PNPM_HOME="/Users/jack/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
