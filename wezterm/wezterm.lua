@@ -6,15 +6,6 @@ return {
 	enable_tab_bar = false,
 	font_size = 16.0,
 	font = wezterm.font('JetBrains Mono'),
-
-	-- font_fallback = { 
-	-- 	"PingFang SC",          -- macOS 系统自带中文字体
-	-- 	"Hiragino Sans GB",      -- macOS 系统简体中文字体
-	-- 	"Apple Color Emoji"      -- 确保 Emoji 正常
-  -- },
-  warn_about_missing_glyphs = false,  -- 关闭缺失字符警告
-
-
 	-- macos_window_background_blur = 40,
 	macos_window_background_blur = 30,
 	
