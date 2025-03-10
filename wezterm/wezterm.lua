@@ -5,7 +5,13 @@ return {
 	color_scheme = 'Catppuccin Mocha',
 	enable_tab_bar = false,
 	font_size = 18.0,
-	font = wezterm.font('JetBrains Mono'),
+	-- font = wezterm.font('JetBrains Mono'),
+	font = wezterm.font_with_fallback({
+		"font-jetbrains-mono-nerd-font",
+		"JetBrains Mono", -- 主字体（英文字体）
+		"PingFang SC", -- 中文字体
+		"Hiragino Sans GB", -- 备选字体（macOS 自带）
+	}),
 	-- macos_window_background_blur = 40,
 	macos_window_background_blur = 30,
 	

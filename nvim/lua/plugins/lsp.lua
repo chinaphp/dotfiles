@@ -24,7 +24,7 @@ local on_attach = function(_, bufnr)
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-  nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+  nmap('<leader>gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
   nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
@@ -57,7 +57,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'helm_ls', 'dockerls', 'volar', 'intelephense', 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls'  }
+local servers = { 'intelephense', 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -68,11 +68,31 @@ require('mason-lspconfig').setup {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+-- 特定服务器的自定义配置
+local server_settings = {
+  intelephense = {
+    settings = {
+      intelephense = {
+        licenceKey = os.getenv('INTELEPHENSELICENCE')
+      }
+    }
+  },
+}
+
 for _, lsp in ipairs(servers) do
-  require('lspconfig')[lsp].setup {
+  local config = {
     on_attach = on_attach,
     capabilities = capabilities,
   }
+
+  -- 合并特定服务器的配置（如果存在）
+  if server_settings[lsp] then
+    for k, v in pairs(server_settings[lsp]) do
+      config[k] = v
+    end
+  end
+
+  require('lspconfig')[lsp].setup(config)
 end
 
 -- Turn on lsp status information
