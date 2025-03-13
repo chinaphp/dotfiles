@@ -7,7 +7,7 @@ return {
 	font_size = 18.0,
 	-- font = wezterm.font('JetBrains Mono'),
 	font = wezterm.font_with_fallback({
-		"font-jetbrains-mono-nerd-font",
+		-- "font-hack-nerd-font",
 		"JetBrains Mono", -- 主字体（英文字体）
 		"PingFang SC", -- 中文字体
 		"Hiragino Sans GB", -- 备选字体（macOS 自带）
