@@ -11,7 +11,7 @@ return {
           settings = {
             intelephense = {
               environment = {
-                phpVersion = "7.4.33",
+                phpVersion = "8.1",
               },
             },
           },

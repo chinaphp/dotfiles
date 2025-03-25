@@ -165,7 +165,6 @@ export PATH="/Applications/Tailscale.app/Contents/MacOS:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/usr/local/opt/node@18/bin:$PATH"
 
 export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 
@@ -174,14 +173,12 @@ export PATH="$PATH:/Users/jack/.rd/bin"
 
 # Added by Windsurf
 export PATH="/Users/jack/.codeium/windsurf/bin:$PATH"
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # 自动加载项目内的 .env_vars
 if [ -f .env_vars ]; then
   source .env_vars
 fi
-export PATH="/usr/local/opt/php@8.1/bin:$PATH"
-export PATH="/usr/local/opt/php@8.1/sbin:$PATH"
 
 # pnpm
 export PNPM_HOME="/Users/jack/Library/pnpm"
@@ -190,3 +187,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export PATH="/usr/local/opt/node@22/bin:$PATH"
