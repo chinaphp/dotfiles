@@ -13,6 +13,17 @@ return {
               environment = {
                 phpVersion = "8.1",
               },
+              -- 禁用 phpcs
+              telemetry = {
+                enabled = false,
+              },
+              files = {
+                maxSize = 5000000,
+              },
+              diagnostics = {
+                -- 禁用所有代码风格检查
+                run = "onType",
+              },
             },
           },
         },
