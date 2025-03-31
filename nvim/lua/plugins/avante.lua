@@ -2,7 +2,6 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
-  build = "make",
   opts = {
     -- add any opts here
     -- provider = "deepseek"
@@ -32,7 +31,7 @@ return {
     },
 
   },
-  
+  build = "make", 
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
     "stevearc/dressing.nvim",
