@@ -11,7 +11,18 @@ return {
           settings = {
             intelephense = {
               environment = {
-                phpVersion = "7.4.33",
+                phpVersion = "8.3.19",
+              },
+              -- 禁用 phpcs
+              telemetry = {
+                enabled = false,
+              },
+              files = {
+                maxSize = 5000000,
+              },
+              diagnostics = {
+                -- 禁用所有代码风格检查
+                run = "onType",
               },
             },
           },

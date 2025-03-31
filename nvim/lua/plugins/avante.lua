@@ -13,7 +13,7 @@ return {
       model = "gpt-4o",
       timeout = 30000, -- timeout in milliseconds
       temperature = 0,
-      max_tokens = 4096,
+      max_tokens = 8192,
     },
 
     cursor_applying_provider = 'groq', -- use groq for applying
