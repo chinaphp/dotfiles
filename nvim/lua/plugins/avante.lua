@@ -16,16 +16,23 @@ return {
       openai = {
         endpoint = "https://gateway.ai.cloudflare.com/v1/58ce867830efe953a08d243e5049e4bd/ai-gateway/openai",
         model = "gpt-4o",
-        timeout = 30000, -- timeout in milliseconds
-        temperature = 0,
-        max_tokens = 8192,
+        extra_request_body = {
+          timeout = 30000, -- 超时时间（毫秒），增加此值以适应推理模型
+          temperature = 0,
+          max_tokens = 8192, -- 增加此值以包括推理模型的推理令牌
+          --reasoning_effort = "medium", -- low|medium|high，仅用于推理模型
+        },
       },
       groq = { -- define groq provider
         __inherited_from = 'openai',
         api_key_name = 'GROQ_API_KEY',
         endpoint = 'https://api.groq.com/openai/v1/',
         model = 'llama-3.3-70b-versatile',
-        max_completion_tokens = 32768,     -- remember to increase this value, otherwise it will stop generating halfway
+        disable_tools = true,
+        extra_request_body = {
+          temperature = 1,
+          max_tokens = 32768, -- remember to increase this value, otherwise it will stop generating halfway
+        },
       },
     },
 
