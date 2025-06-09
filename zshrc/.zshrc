@@ -63,7 +63,7 @@ alias ......="cd ../../../../.."
 export GOPATH='/Users/jack/go'
 
 # VIM
-alias v="/opt/homebrew/bin/nvim"
+alias v="/usr/local/bin/nvim"
 
 # Nmap
 alias nm="nmap -sC -sV -oN nmap"
