@@ -194,3 +194,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
+
+CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1
