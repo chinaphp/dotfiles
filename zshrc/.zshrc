@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jack/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 # Reevaluate the prompt string each time it's displaying a prompt
 setopt prompt_subst
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -61,7 +61,7 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 # GO
-export GOPATH='/Users/jack/go'
+export GOPATH="$HOME/go"
 
 # VIM
 alias v="/opt/homebrew/bin/nvim"
@@ -69,7 +69,7 @@ alias v="/opt/homebrew/bin/nvim"
 # Nmap
 alias nm="nmap -sC -sV -oN nmap"
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/omer/.vimpkg/bin:${GOPATH}/bin:/Users/jack/.cargo/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/omer/.vimpkg/bin:${GOPATH}/bin:$HOME/.cargo/bin
 
 alias cl='clear'
 
@@ -142,7 +142,7 @@ f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
 fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
 
 
-export XDG_CONFIG_HOME="/Users/jack/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
@@ -154,7 +154,7 @@ PATH=~/.console-ninja/.bin:$PATH
 export PATH="/opt/homebrew/sbin:$PATH"
 
 # Created by `pipx` on 2024-05-24 02:53:29
-export PATH="$PATH:/Users/jack/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 export PATH="/Applications/Tailscale.app/Contents/MacOS:$PATH"
 
@@ -183,11 +183,11 @@ if [ -f ~/.env_vars ]; then
 fi
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/jack/.cache/lm-studio/bin"
+export PATH="$PATH:$HOME/.cache/lm-studio/bin"
 
 alias ssh="TERM=xterm-256color ssh"
 # pnpm
-export PNPM_HOME="/Users/jack/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -198,7 +198,7 @@ export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1
 
 # Smart Suggestion # smart-suggestion
-source /Users/jack/.config/smart-suggestion/smart-suggestion.plugin.zsh # smart-suggestion
+source "$HOME/.config/smart-suggestion/smart-suggestion.plugin.zsh" # smart-suggestion
 
 
 
@@ -206,9 +206,9 @@ source /Users/jack/.config/smart-suggestion/smart-suggestion.plugin.zsh # smart-
 
 
 # Added by CodeBuddy CN
-export PATH="/Users/jack/.codebuddy/bin:$PATH"
+export PATH="$HOME/.codebuddy/bin:$PATH"
 
 
 
 # Added by CodeBuddy
-export PATH="/Users/jack/.codebuddy/bin:$PATH"
+export PATH="$HOME/.codebuddy/bin:$PATH"

@@ -18,11 +18,11 @@ hs.hotkey.bind({"alt"}, "R", function()
 end)
 hs.alert.show("Config loaded")
 
-local calendar = hs.loadSpoon("GoMaCal")
-if calendar then
-    calendar:setCalendarPath('/Users/jack/dotfiles/hammerspoon/calendar-app/calapp')
-    calendar:start()
-end
+-- local calendar = hs.loadSpoon("GoMaCal")
+-- if calendar then
+-- 	calendar:setCalendarPath(os.getenv("HOME") .. '/dotfiles/hammerspoon/calendar-app/calapp')
+--     calendar:start()
+-- end
 
 
 
