@@ -7,12 +7,31 @@ return {
     -- provider = "deepseek"
 
     provider = "openai",
-    cursor_applying_provider = 'groq', -- use groq for applying
+    -- provider = "claude",
+    cursor_applying_provider = "groq", -- use groq for applying
     behaviour = {
       --- ... existing behaviours
       enable_cursor_planning_mode = true, -- enable cursor planning mode!
     },
     providers = {
+      claude = {
+        endpoint = "https://api.moonshot.cn/anthropic",
+        model = "claude-sonnet-4-20250514",
+        timeout = 30000, -- Timeout in milliseconds
+        extra_request_body = {
+          temperature = 0.75,
+          max_tokens = 20480,
+        },
+      },
+      moonshot = {
+        endpoint = "https://api.moonshot.ai/v1",
+        model = "kimi-k2-0905-preview",
+        timeout = 30000, -- 超时时间（毫秒）
+          extra_request_body = {
+            temperature = 0.75,
+            max_tokens = 32768,
+          },
+      },
       openai = {
         endpoint = "https://gateway.ai.cloudflare.com/v1/58ce867830efe953a08d243e5049e4bd/ai-gateway/openai",
         model = "gpt-4o",
@@ -24,10 +43,10 @@ return {
         },
       },
       groq = { -- define groq provider
-        __inherited_from = 'openai',
-        api_key_name = 'GROQ_API_KEY',
-        endpoint = 'https://api.groq.com/openai/v1/',
-        model = 'llama-3.3-70b-versatile',
+        __inherited_from = "openai",
+        api_key_name = "GROQ_API_KEY",
+        endpoint = "https://api.groq.com/openai/v1/",
+        model = "llama-3.3-70b-versatile",
         disable_tools = true,
         extra_request_body = {
           temperature = 1,
@@ -35,9 +54,6 @@ return {
         },
       },
     },
-
-
-
   },
   build = "make",
   dependencies = {
@@ -45,12 +61,12 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- 以下依赖项是可选的，
-    "echasnovski/mini.pick", -- 用于文件选择器提供者 mini.pick
+    "nvim-mini/mini.pick", -- 用于文件选择器提供者 mini.pick
     "nvim-telescope/telescope.nvim", -- 用于文件选择器提供者 telescope
     "hrsh7th/nvim-cmp", -- avante 命令和提及的自动完成
     "ibhagwan/fzf-lua", -- 用于文件选择器提供者 fzf
-    "nvim-tree/nvim-web-devicons", -- 或 echasnovski/mini.icons
-    -- "zbirenbaum/copilot.lua", -- for providers='copilot'
+    "nvim-tree/nvim-web-devicons", -- 或 nvim-mini/mini.icons
+    "zbirenbaum/copilot.lua", -- for providers='copilot'
     {
       -- support for image pasting
       "HakonHarnes/img-clip.nvim",
@@ -70,7 +86,7 @@ return {
     },
     --- The below is optional, make sure to setup it properly if you have lazy=true
     {
-      'MeanderingProgrammer/render-markdown.nvim',
+      "MeanderingProgrammer/render-markdown.nvim",
       opts = {
         file_types = { "markdown", "Avante" },
       },

@@ -196,3 +196,19 @@ esac
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 
 CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1
+
+# Smart Suggestion # smart-suggestion
+source /Users/jack/.config/smart-suggestion/smart-suggestion.plugin.zsh # smart-suggestion
+
+
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+
+# Added by CodeBuddy CN
+export PATH="/Users/jack/.codebuddy/bin:$PATH"
+
+
+
+# Added by CodeBuddy
+export PATH="/Users/jack/.codebuddy/bin:$PATH"
