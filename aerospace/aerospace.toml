@@ -105,7 +105,7 @@ inner.vertical =   20
 outer.left =       20
 outer.bottom =     20
 outer.top =        10
-outer.right =      80
+outer.right =      20
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -185,11 +185,10 @@ alt-shift-semicolon = 'mode service'
 alt-shift-enter = 'mode apps'
 
 alt-t = 'exec-and-forget open -a /Applications/Telegram.app'
-alt-a = 'exec-and-forget open -a /Applications/Arc.app'
 alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
 alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-s = 'exec-and-forget open -a /Applications/Safari.app'
-alt-q = 'exec-and-forget open -a /System/Applications/QuickTime Player.app'
+alt-q = 'exec-and-forget open -a "/System/Applications/QuickTime Player.app"'
 alt-w = 'exec-and-forget open -a /Applications/WezTerm.app'
 
 

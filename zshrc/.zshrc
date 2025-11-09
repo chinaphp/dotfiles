@@ -148,7 +148,7 @@ eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(direnv hook zsh)"
 
-PATH=~/.console-ninja/.bin:$PATH
+
 
 # export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -162,13 +162,30 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/ibm-semeru-open-8.jdk/Contents/Home"
+#export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/ibm-semeru-open-8.jdk/Contents/Home"
+#export JAVA_17_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+#alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
+#alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
 
-export JAVA_17_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+export JAVA_21_HOME=$(/usr/libexec/java_home -v21)
 
-alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
+#默认使用jdk17
+export JAVA_HOME=$JAVA_21_HOME
+export PATH=$JAVA_HOME/bin:$PATH
 
-alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
+# 快速切换函数
+# jdk() {
+#     case "$1" in
+#         11) export JAVA_HOME=$JAVA_11_HOME ;;
+#         17) export JAVA_HOME=$JAVA_17_HOME ;;
+#         21) export JAVA_HOME=$JAVA_21_HOME ;;
+#          *) echo "Usage: jdk 11|17|21" ;;
+#     esac
+#     export PATH=$JAVA_HOME/bin:$PATH
+#     java -version
+# }
+
+
 
 
 alias skopeo-copy="skopeo copy --override-arch amd64 --override-os linux "
@@ -209,6 +226,3 @@ source "$HOME/.config/smart-suggestion/smart-suggestion.plugin.zsh" # smart-sugg
 export PATH="$HOME/.codebuddy/bin:$PATH"
 
 
-
-# Added by CodeBuddy
-export PATH="$HOME/.codebuddy/bin:$PATH"
